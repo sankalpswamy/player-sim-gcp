@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Player Similarity</title>
+  </head>
+  <body>
+    <h1>Player Similarity — Offense & Defense</h1>
+    <form id="f">
+      <label>Mode
+        <select name="mode" id="mode">
+          <option value="offense" selected>offense</option>
+          <option value="defense">defense</option>
+        </select>
+      </label><br>
+
+      <div id="offense-fields">
+        <label>passing_yards_pg <input name="passing_yards_pg" type="number" step="any" required></label><br>
+        <label>passing_tds_pg <input name="passing_tds_pg" type="number" step="any" required></label><br>
+        <label>ints_pg <input name="ints_pg" type="number" step="any" required></label><br>
+        <label>rushing_yards_pg <input name="rushing_yards_pg" type="number" step="any" required></label><br>
+        <label>rushing_tds_pg <input name="rushing_tds_pg" type="number" step="any" required></label><br>
+        <label>receiving_yards_pg <input name="receiving_yards_pg" type="number" step="any" required></label><br>
+      </div>
+
+      <div id="defense-fields" style="display:none;">
+        <label>tackles_pg <input name="tackles_pg" type="number" step="any"></label><br>
+        <label>sacks_pg <input name="sacks_pg" type="number" step="any"></label><br>
+        <label>ints_pg <input name="ints_pg" type="number" step="any"></label><br>
+        <label>ff_pg <input name="ff_pg" type="number" step="any"></label><br>
+        <label>fr_pg <input name="fr_pg" type="number" step="any"></label><br>
+        <label>pd_pg <input name="pd_pg" type="number" step="any"></label><br>
+        <label>tfl_pg <input name="tfl_pg" type="number" step="any"></label><br>
+      </div>
+
+      <label>k <input name="k" type="number" value="5"></label><br>
+      <label>API URL <input id="api" type="url" placeholder="https://<cloud-run-url>"></label><br>
+      <button type="submit">Find Similar Players</button>
+    </form>
+    <pre id="out"></pre>
+    <script src="/src/app.js" type="module"></script>
+  </body>
+</html>

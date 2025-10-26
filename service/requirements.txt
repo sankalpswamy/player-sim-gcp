@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pandas
+numpy
+scikit-learn
+pyarrow
+joblib
+google-cloud-bigquery
+faiss-cpu==1.7.4 ; platform_machine=='x86_64'
